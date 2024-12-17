@@ -5,7 +5,7 @@ public class MyWorld extends World
     public Player player;
     public MyWorld() {    
         super(800, 800, 1, false);
-        player = new Player();
+        player = new Player(this);
         addObject(player, 400, 400);
         
         addObject(new Block(1, 0, 65, this), 0, 0);

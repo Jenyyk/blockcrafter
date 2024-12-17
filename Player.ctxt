@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=
-comment1.target=void\ act()
+comment1.params=world
+comment1.target=Player(MyWorld)
 comment2.params=
-comment2.target=void\ moveTrig()
+comment2.target=void\ act()
 comment3.params=
-comment3.target=boolean[]\ blockDirections()
-numComments=4
+comment3.target=void\ moveTrig()
+comment4.params=
+comment4.target=boolean[]\ blockDirections()
+comment5.params=
+comment5.target=void\ placeTrig()
+comment6.params=
+comment6.target=void\ breakTrig()
+numComments=7
