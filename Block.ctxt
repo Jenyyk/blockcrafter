@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Block
+comment1.params=type\ posX\ posY\ world
+comment1.target=Block(int,\ float,\ float,\ MyWorld)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ renderSelf()
+numComments=4
