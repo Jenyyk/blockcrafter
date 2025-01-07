@@ -22,7 +22,12 @@ public class Block extends Actor
         setLocation((int) (this.blockPosX - player.posX) + 400, (int) (this.blockPosY - player.posY) + 400);
     }
     private void renderSelf() {
-        GreenfootImage texture = new GreenfootImage("images/" + this.type + ".png");
+        GreenfootImage texture;
+        try {
+            texture = new GreenfootImage("images/" + this.type + ".png");
+        } catch (Exception e) {
+            texture = new GreenfootImage("images/1.png");
+        }
         texture.scale(20, 20);
         setImage(texture);
     }

@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Hotbar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Hotbar extends Actor
 {
     public int selected = 1;
@@ -28,6 +22,7 @@ public class Hotbar extends Actor
     
     private int thickness = 5;
     private void renderHotbar(int slot) {
+        // draws selected slot
         slot--;
         GreenfootImage hotbar = new GreenfootImage("images/hotbar.png");
         hotbar.setColor(Color.RED);
@@ -35,6 +30,18 @@ public class Hotbar extends Actor
         for (int i = 0; i < thickness; i++) {
             hotbar.drawRect(19 + (int) (slot*50.5) + i, 85 + i, 50 - 2*i, 50 - 2*i);
         }
+        
+        // draws block previews
+        for (int i = 1; i <= 9; i++) {
+            GreenfootImage blockView;
+            try {
+                blockView = new GreenfootImage("images/" + i + ".png");
+            }
+            catch (Exception e) { continue; }
+            blockView.scale(30, 30);
+            hotbar.drawImage(blockView, 30 + (i-1) * 50, 95);
+        }
+        
         setImage(hotbar);
     }
 }

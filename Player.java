@@ -92,7 +92,7 @@ public class Player extends Actor
         if (Math.abs(worldX - posX / 20) > 5 || Math.abs(worldY - posY / 20) > 5) { return; }
         world.showText("new block at " + worldX + " " + worldY, 120, 60);
         
-        world.addObject(new Block(1, worldX, worldY, world), 0, 0);
+        world.addObject(new Block(hotbar.selected, worldX, worldY, world), 0, 0);
     }
     private void breakTrig() {
         MouseInfo mouse = Greenfoot.getMouseInfo();
