@@ -9,15 +9,19 @@ public class Player extends Actor
     public float velY = 0;
     
     private MyWorld world;
-    public Player(MyWorld world) {
+    private Hotbar hotbar;
+    public Player(MyWorld world, Hotbar hotbar) {
         this.world = world;
+        this.hotbar = hotbar;
     }
     
     public void act()
     {
-       moveTrig();
-       placeTrig();
-       breakTrig();
+        GreenfootImage img = this.getImage();
+        img.scale(20,20);
+        moveTrig();
+        placeTrig();
+        breakTrig();
     }
     
     private void moveTrig() {

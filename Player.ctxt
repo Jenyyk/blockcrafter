@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=world
-comment1.target=Player(MyWorld)
+comment1.params=world\ hotbar
+comment1.target=Player(MyWorld,\ Hotbar)
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
